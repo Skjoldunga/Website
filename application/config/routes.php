@@ -50,15 +50,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'accueil';
-$route['news/(:any)'] = 'news/$1';
-$route['news'] = 'news';
-/**
- * Code Igniter va faire le routage des pages web : 
- * le nom de fichier dans l'url doit être celui du fichier dans le dossier controlers
- * et de la classe dans ce fichier 
- * (le nom de la classe doit démarrer par une majuscule) 
- */
-//$route['(:any)'] = '$1';
-
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

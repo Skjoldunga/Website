@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/Base_1/CodeIgniter-3.0.6/';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,17 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'accueil.php';
+
+/*
+|--------------------------------------------------------------------------
+| Index File
+|--------------------------------------------------------------------------
+*/
+//    Dans le cas où mod_rewrite est activé
+$config['index_page'] = "";
+
+//    Dans le cas contraire
+#$config['index_page'] = "index.php";
 
 /*
 |--------------------------------------------------------------------------
@@ -314,7 +324,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = '987298732987398722987323987';
 
 /*
 |--------------------------------------------------------------------------

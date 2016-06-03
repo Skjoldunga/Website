@@ -43,6 +43,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li>Venir au Fest'Esaip</li>
         </div>
     </div>
+    <div class="footer-spacer">
+        
+    </div>
+</div>
+<div class="footer-content + footer-content-end">
+    <p>CODEIGNITER 3.0.6</p>
 </div>
 </footer>
 

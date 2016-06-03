@@ -54,6 +54,14 @@ li
 .footer-content
 {
     z-index: 1;
+    border: 1px solid white;
+}
+
+.footer-content-end
+{
+    border-top: 5px solid white;
+    margin-top: 0px;
+    padding-top: 15px;
 }
 
 .footer-spacer
@@ -61,17 +69,20 @@ li
     padding: 10px !important;
     display: table-cell;
     float: none !important;
+    border: 1px solid red;
 }
 
 .footer-title
 {
     text-transform: uppercase;
     font-weight: bold;
+    border: 1px solid green;
 }
 
 .footer-link
 {
     padding: 20px 10px 35px 10px;
+    border: 1px solid blue;
 }
 
 /* END FOOTER PART */

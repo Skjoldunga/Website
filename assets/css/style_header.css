@@ -101,10 +101,6 @@ h3
 	text-decoration: none;
 	margin: 1% 0% 0% 0%;
 }
-/*FLO*/
-h4{
-	font-size : 130%;
-}
 
 a, a:active
 {
@@ -319,47 +315,6 @@ a, a:active
 		margin: 0;
 		animation: 15s slidy_sponsors infinite; 
 	}
-
-
-	/* ENF NATHAN
-	   START FestEsaip (Flor)*/
-	table 
-	{ 
-		margin: auto;
-	    border-collapse: collapse;
-		width: 100%
-	}
-	
-	th{
-		 border-top : 1px solid;	
-		 border-bottom :  1px solid;
-	}
-	
-	tr:hover{background-color:rgba(0, 0, 0, 0.5)}
-	
-	.anonce
-	{
-		text-align: center;
-		font-size :150%;
-		font-style: bold;
-		color : #009900;	
-
-	}
-
-	.espace{
-		font-size :130%;
-		margin: 1em 0;
-		list-style-position: inside;
-		text-align: center;
-	}
-
-	.FestEsaip
-	{
-		color:white;
-	}
-
-/*END FLOR*/
-
 }
 
 @media screen and (max-width: 1025px)
@@ -480,5 +435,4 @@ li
 }
 
 /* END FOOTER PART */
-
 

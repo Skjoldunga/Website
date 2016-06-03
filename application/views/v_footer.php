@@ -12,10 +12,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <footer>
-<div class="footer-content">
-    <div class="footer-spacer">
+<div class="footer-row">
+    <div class="footer-widget">
         <div class="footer-title">Fest'Esaip</div>
-        <div class="footer-link">
+        <div class="footer-body">
             <li>
                 <a href="Historique/c1" >Historique</a>
             </li>
@@ -23,9 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li>Sponsors</li>
         </div>
     </div>
-    <div class="footer-spacer">
+    <div class="footer-widget">
         <div class="footer-title">Programmation</div>
-        <div class="footer-link">
+        <div class="footer-body">
             <li>
                 <a href="" >Animations</a>
             </li>
@@ -33,9 +33,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li>Concerts</li>
         </div>
     </div>
-    <div class="footer-spacer">
+    <div class="footer-widget">
         <div class="footer-title">Infos Pratiques</div>
-        <div class="footer-link">
+        <div class="footer-body">
             <li>Camping</li>
             <li>
                 <a href="" >Accessibilité</a>
@@ -43,12 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li>Venir au Fest'Esaip</li>
         </div>
     </div>
-    <div class="footer-spacer">
-        
+    <div class="footer-widget-text">
+        <p>Page rendered in <strong>{elapsed_time}</strong> seconds.</p>
+        <p><?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
     </div>
-</div>
-<div class="footer-content + footer-content-end">
-    <p>CODEIGNITER 3.0.6</p>
 </div>
 </footer>
 

@@ -32,6 +32,50 @@ header
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
+
+/* START FOOTER PART */
+footer
+{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: grey;
+    display: block;
+    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+    
+}
+
+li
+{
+    list-style-type:none;
+}
+
+.footer-content
+{
+    z-index: 1;
+}
+
+.footer-spacer
+{
+    padding: 10px !important;
+    display: table-cell;
+    float: none !important;
+}
+
+.footer-title
+{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-link
+{
+    padding: 20px 10px 35px 10px;
+}
+
+/* END FOOTER PART */
+
 #text_titre
 {
 	/*

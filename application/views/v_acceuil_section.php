@@ -8,7 +8,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-
+</div><!-- fin de la div container -->
 
 
 		<section>
@@ -58,7 +58,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</figure>
 			</aside>
 		</section>
-</div><!-- fin de la div container -->
 
 
 </body>

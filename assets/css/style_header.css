@@ -371,6 +371,7 @@ a, a:active
 		display: flex;
 		flex-direction: row;
 		justify-content: left;
+		
 	}
 
 	#menu ol
@@ -379,6 +380,132 @@ a, a:active
 		position: relative;
 		margin: 0% 0% 0% 0px;
 	    padding: 0% 0% 0% 0%;
+	}
+	
+		/* Nathan*/
+	section aside
+	{	
+		margin: 1.5% 3% 0% 3%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	section div
+	{	
+		margin: 1.5% 3% 0% 3%;
+		padding: 0.5% 0% 1.5% 0%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+	
+	section div p{
+		color: white;
+		font-size: 115%;
+		text-align:justify;
+		padding: 1.5% 5% 0% 5%;
+	}
+	
+	#body_flexbox{
+	
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: space-between;
+	}
+	
+	figure#artistes{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	
+	@keyframes slidy_artistes
+	{
+		0% { left: 0%; }
+		11% { left: 0%; }
+		16% { left: -33.3333%; }
+		27% { left: -33.3333%; }
+		32% { left: -66.6666%; }
+		43% { left: -66.6666%; }
+		48% { left: -100%; }
+		60% { left: -100%; }
+		65% { left: -133.3333%; }
+		79% { left: -133.3333%; }
+		85% { left: -166.6666%; }
+		95% { left: -166.6666%; }
+		100% { left: -200%;}	
+	}
+
+	aside#slider_artistes { overflow: hidden; }
+	
+	aside#slider_artistes figure p
+	{ 
+		width: 100%;
+		float: left;
+		font-size: 250%;
+	}
+
+	aside#slider_artistes figure { 
+	position: relative;
+	width: 300%; /* 100*nb_images/nb_images_par_slide% */
+	margin: 0;
+	text-align: center;
+	animation: 15s slidy_artistes infinite; 
+	}
+	
+	.small_image{
+		width: 100px;
+		height: 60px;		
+	}
+	figure#sponsors{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		align-items: center;
+		padding: 2% 0% 2% 0%;
+	}
+	
+	@keyframes slidy_sponsors
+	{
+		0% { left: 0%; } 1% { left: -2%; } 2% { left: -4%; } 3% { left: -6%; } 4% { left: -8%; }
+		5% { left: -10%; } 6% { left: -12%; } 7% { left: -14%; } 8% { left: -16%; } 9% { left: -18%; }
+		10% { left: -20%; } 11% { left: -22%; } 12% { left: -24%; } 13% { left: -26%; } 14% { left: -28%; }
+		15% { left: -30%; } 16% { left: -32%; } 17% { left: -34%; } 18% { left: -36%; } 19% { left: -38%; }
+		20% { left: -40%; } 21% { left: -42%; } 22% { left: -44%; } 23% { left: -46%; } 24% { left: -48%; }
+		25% { left: -50%; } 26% { left: -52%; } 27% { left: -54%; } 28% { left: -56%; } 29% { left: -58%; }
+		30% { left: -60%; } 31% { left: -62%; } 32% { left: -64%; } 33% { left: -66%; } 34% { left: -68%; }
+		35% { left: -70%; } 36% { left: -72%; } 37% { left: -74%; } 38% { left: -76%; } 39% { left: -78%; }
+		40% { left: -80%; } 41% { left: -82%; } 42% { left: -84%; } 43% { left: -86%; } 44% { left: -88%; }
+		45% { left: -90%; } 46% { left: -92%; } 47% { left: -94%; } 48% { left: -96%; } 49% { left: -98%; }
+		50% { left: -100%; } 51% { left: -98%; } 52% { left: -96%; } 53% { left: -94%; } 54% { left: -92%; }
+		55% { left: -90%; } 56% { left: -88%; } 57% { left: -86%; } 58% { left: -84%; } 59% { left: -82%; }
+		60% { left: -80%; } 61% { left: -78%; } 62% { left: -76%; } 63% { left: -74%; } 64% { left: -72%; }
+		65% { left: -70%; } 66% { left: -68%; } 67% { left: -66%; } 68% { left: -64%; } 69% { left: -62%; }
+		70% { left: -60%; } 71% { left: -58%; } 72% { left: -56%; } 73% { left: -54%; } 74% { left: -52%; }
+		75% { left: -50%; } 76% { left: -48%; } 77% { left: -46%; } 78% { left: -44%; } 79% { left: -42%; }
+		80% { left: -40%; } 81% { left: -38%; } 82% { left: -36%; } 83% { left: -34%; } 84% { left: -32%; }
+		85% { left: -30%; } 86% { left: -28%; } 87% { left: -26%; } 88% { left: -24%; } 89% { left: -22%; }
+		90% { left: -20%; } 91% { left: -18%; } 92% { left: -16%; } 93% { left: -14%; } 94% { left: -12%; }
+		95% { left: -10%; } 96% { left: -8%; } 97% { left: -6%; } 98% { left: -4%; } 99% { left: -2%; }
+		100% { left: 0%; }
+	}
+
+	aside#slider_sponsors { overflow: hidden; }
+
+	aside#slider_sponsors figure
+	{ 
+		position: relative;
+		width: 200%; /* 100*nb_images/nb_images_par_slide% */
+		margin: 0;
+		animation: 15s slidy_sponsors infinite; 
+	}
+	
+	section
+	{
+		width: calc(100% - 130px); /*Merci Antoine pour les pixels. Pensez au 'calc'!*/
 	}
 }
 

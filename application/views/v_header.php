@@ -71,10 +71,7 @@
 				</div>
 			</nav>
 
-			<aside>
-				PLOP
-			</aside>
-		</div>
+
 
 
 

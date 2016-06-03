@@ -23,8 +23,8 @@
 
 						<li>Fest'Esaip
 							<ul>
-								<li><a href="Historique/c1">Historique</a></li>
-								<li>Equipes / Contact</li>
+								<li><?php echo anchor($uri = $url_base."/Historique/c1#historique", $title = 'historique', $attributes = 'contact')?>
+								<li><?php echo anchor($uri = $url_base."/Historique/c1#contact", $title = 'Equipes / Contact', $attributes = 'contact')?></li>
 								<li>Sponsors</li>
 							</ul>
 						</li>

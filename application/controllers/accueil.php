@@ -1,44 +1,54 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
 class Accueil extends CI_Controller {
-
-        /**
-         * Index Page for this controller.
-         *
-         * Maps to the following URL
-         * 		http://example.com/index.php/welcome
-         *	- or -
-         * 		http://example.com/index.php/welcome/index
-         *	- or -
-         * Since this controller is set as the default controller in
-         * config/routes.php, it's displayed at http://example.com/
-         *
-         * So any other public methods not prefixed with an underscore will
-         * map to /index.php/welcome/<method_name>
-         * @see https://codeigniter.com/user_guide/general/urls.html
-         * 
-         * @author Mickael Ruau
-         * @date 25/05/2016
-         * @version 0.1
-         */
+    
 	public function index()
-	{
-            //$this->load->view('welcome_message');
-            
-            /* V1 perso : je change le nom du contrôleur :
-             * it works !!!
-            $this->load->view('v_index_default');
-            */
-            
-            /* V2 perso : je découype ma vue en plusieurs parties
-             * (pour faciliter la maintenancve et l'évolution du frontend)
-             */
-            $data = NULL;
-            $page = 'v_accueil_defaut';
-            $this->load->view('templates/v_header', $data);
-            $this->load->view($page, $data);
-            $this->load->view('templates/v_footer', $data);
+	{       
+                $sess_array=$this->session->userdata('logged_in');
+                $data = array();
+                if($sess_array['username']!=NULL)
+                {
+                    $data['log_or_not']='<a href="'.  base_url() .'accueil/logout">Se déconnecter</a></li>';
+                }
+                else 
+                {
+                    $data['log_or_not']='Se connecter';
+                }
+                
+                $data['url_base'] = base_url();
+		$this->load->view('v_header', $data);
+                
 	}
+        public function login()
+	{
+                $this->load->model('user');
+                $username = htmlspecialchars($_POST['login']);
+                $password = htmlspecialchars($_POST['pass']);
+                $result = $this->user->login($username, $password);
+                
+                if($result)
+                    {
+                        $sess_array = array();
+                        foreach($result as $row)
+                        {
+                            $sess_array = array(
+                            'id' => $row->id,
+                            'username' => $row->username
+                        );
+                            $this->session->set_userdata('logged_in', $sess_array);
+                        }  
+                    }
+                else
+                    {
+                    }	
+                redirect('', 'refresh');
+	}
+        
+        public function logout()
+        {
+            $this->session->unset_userdata('logged_in');
+            session_destroy();         
+            redirect('', 'refresh');
+        }
 }

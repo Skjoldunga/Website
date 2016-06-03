@@ -133,3 +133,9 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = array();
+
+/*
+ * On charge la gestion des sessions, des bdds et le helper URL
+ */
+$autoload['libraries'] = array('database','session');
+$autoload['helper'] = array('url');

@@ -18,7 +18,7 @@ class Accueil extends CI_Controller {
                 
                 $data['url_base'] = base_url();
 		$this->load->view('v_header', $data);
-        $this->load->view('v_acceuil_section');
+        $this->load->view('v_acceuil_section', $data);
         $this->load->view('v_footer');
                 
 	}

@@ -1,10 +1,39 @@
+/*Partie Nathan*/
+@font-face {
+    font-family: 'nirvana_font';
+    src:url("fonts/nirvana_font.ttf") format('truetype');
+
+}
+@font-face {
+    font-family: 'ironmaiden_font';
+    src:url("fonts/ironmaiden_font.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'acdc_font';
+    src:url("fonts/acdc_font.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'daftpunk_font';
+    src:url("fonts/daftpunk_font.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'thebeatles_font';
+    src:url("fonts/thebeatles_font.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'scorpions_font';
+    src:url("fonts/scorpions_font.ttf") format('truetype');
+}
+/*Fin Nathan*/
+
+
 body
 {
 	min-width: 500px;
 	margin-left: auto;
   	margin-right: auto;
 	background-color:white;
-  	background-image: url(../img/fond.jpg);
+  	/*background-image: url(../img/fond.jpg);*/
   	background-attachment:fixed;
   	background-repeat:no-repeat;
   	background-position:50% 50%;
@@ -31,58 +60,6 @@ header
 
 	background-color: rgba(0, 0, 0, 0.7);
 }
-
-
-/* START FOOTER PART */
-footer
-{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: grey;
-    display: table;
-    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
-    
-}
-
-li
-{
-    list-style-type:none;
-}
-
-.footer-row
-{
-    display: table-row;
-}
-
-.footer-widget
-{
-    padding: 0 !important;
-    display: table-cell;
-    max-width: 18% !important;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
-}
-
-.footer-widget-text
-{
-    padding: 0 !important;
-    display: table-cell;
-    min-width: 50% !important;
-}
-
-.footer-title
-{
-    text-transform: uppercase;
-    padding: 0 0 0 5px;
-    font-weight: bold;
-}
-
-.footer-body
-{
-    padding: 10px;
-}
-/* END FOOTER PART */
 
 #text_titre
 {
@@ -112,18 +89,35 @@ h1
 	text-decoration: none;
 }
 
+/*Nathan*/
+h3
+{
+	color: yellow;
+	font-size: 175%;
+	text-align: center;
+	font-weight: normal;
+	font-style: oblique;
+	text-decoration: none;
+	margin: 1% 0% 0% 0%;
+}
+/*FLO*/
+h4{
+	font-size : 130%;
+}
+
 a, a:active
 {
     text-decoration: none;
     color:white;
 }
 
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 1025px)
 {
-        body
-        {
-            width: 65%;
-        }
+    body
+    {
+    	background-image: url(../img/fond.jpg);
+        width: 65%;
+    }
 	nav
 	{
 		/*border: 1px solid black;*/
@@ -165,6 +159,15 @@ a, a:active
 	    z-index: 1000;
 	}
 
+	#menu ol
+	{
+		position: absolute;
+	/* on cache les sous menus complètement sur la gauche */
+	    left: -999em;
+	    text-align: left;
+	    z-index: 1000;
+	}
+
 	#menu li ul li
 	{
 		font-size: 95%;
@@ -183,10 +186,188 @@ a, a:active
 	    background-color: rgba(0, 0, 0, 0.7);
 	    */
 	}
+
+	#menu li:hover ol {
+	/* Au survol des li du menu on replace les sous menus */
+	    left: auto;
+	    /*
+	    background-color: rgba(0, 0, 0, 0.7);
+	    */
+	    width: 50px;
+		margin: 0% 0% 0% 0px;
+	    padding: 0% 0% 0% 0%;
+	}
+
+		/* Nathan*/
+	section aside
+	{	
+		margin: 1.5% 0% 0% 0%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	section div
+	{	
+		margin: 1.5% 0% 0% 0%;
+		padding: 0.5% 0% 1.5% 0%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+	
+	section div p{
+		color: white;
+		font-size: 115%;
+		text-align:justify;
+		padding: 1.5% 5% 0% 5%;
+	}
+	
+	#body_flexbox{
+	
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: space-between;
+	}
+	
+	figure#artistes{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	
+	@keyframes slidy_artistes
+	{
+		0% { left: 0%; }
+		11% { left: 0%; }
+		16% { left: -33.3333%; }
+		27% { left: -33.3333%; }
+		32% { left: -66.6666%; }
+		43% { left: -66.6666%; }
+		48% { left: -100%; }
+		60% { left: -100%; }
+		65% { left: -133.3333%; }
+		79% { left: -133.3333%; }
+		85% { left: -166.6666%; }
+		95% { left: -166.6666%; }
+		100% { left: -200%;}	
+	}
+
+	aside#slider_artistes { overflow: hidden; }
+	
+	aside#slider_artistes figure p
+	{ 
+		width: 100%;
+		float: left;
+		font-size: 250%;
+	}
+
+	aside#slider_artistes figure { 
+	position: relative;
+	width: 300%; /* 100*nb_images/nb_images_par_slide% */
+	margin: 0;
+	text-align: center;
+	animation: 15s slidy_artistes infinite; 
+	}
+	
+	.small_image{
+		width: 100px;
+		height: 60px;		
+	}
+	figure#sponsors{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		align-items: center;
+		padding: 2% 0% 2% 0%;
+	}
+	
+	@keyframes slidy_sponsors
+	{
+		0% { left: 0%; } 1% { left: -2%; } 2% { left: -4%; } 3% { left: -6%; } 4% { left: -8%; }
+		5% { left: -10%; } 6% { left: -12%; } 7% { left: -14%; } 8% { left: -16%; } 9% { left: -18%; }
+		10% { left: -20%; } 11% { left: -22%; } 12% { left: -24%; } 13% { left: -26%; } 14% { left: -28%; }
+		15% { left: -30%; } 16% { left: -32%; } 17% { left: -34%; } 18% { left: -36%; } 19% { left: -38%; }
+		20% { left: -40%; } 21% { left: -42%; } 22% { left: -44%; } 23% { left: -46%; } 24% { left: -48%; }
+		25% { left: -50%; } 26% { left: -52%; } 27% { left: -54%; } 28% { left: -56%; } 29% { left: -58%; }
+		30% { left: -60%; } 31% { left: -62%; } 32% { left: -64%; } 33% { left: -66%; } 34% { left: -68%; }
+		35% { left: -70%; } 36% { left: -72%; } 37% { left: -74%; } 38% { left: -76%; } 39% { left: -78%; }
+		40% { left: -80%; } 41% { left: -82%; } 42% { left: -84%; } 43% { left: -86%; } 44% { left: -88%; }
+		45% { left: -90%; } 46% { left: -92%; } 47% { left: -94%; } 48% { left: -96%; } 49% { left: -98%; }
+		50% { left: -100%; } 51% { left: -98%; } 52% { left: -96%; } 53% { left: -94%; } 54% { left: -92%; }
+		55% { left: -90%; } 56% { left: -88%; } 57% { left: -86%; } 58% { left: -84%; } 59% { left: -82%; }
+		60% { left: -80%; } 61% { left: -78%; } 62% { left: -76%; } 63% { left: -74%; } 64% { left: -72%; }
+		65% { left: -70%; } 66% { left: -68%; } 67% { left: -66%; } 68% { left: -64%; } 69% { left: -62%; }
+		70% { left: -60%; } 71% { left: -58%; } 72% { left: -56%; } 73% { left: -54%; } 74% { left: -52%; }
+		75% { left: -50%; } 76% { left: -48%; } 77% { left: -46%; } 78% { left: -44%; } 79% { left: -42%; }
+		80% { left: -40%; } 81% { left: -38%; } 82% { left: -36%; } 83% { left: -34%; } 84% { left: -32%; }
+		85% { left: -30%; } 86% { left: -28%; } 87% { left: -26%; } 88% { left: -24%; } 89% { left: -22%; }
+		90% { left: -20%; } 91% { left: -18%; } 92% { left: -16%; } 93% { left: -14%; } 94% { left: -12%; }
+		95% { left: -10%; } 96% { left: -8%; } 97% { left: -6%; } 98% { left: -4%; } 99% { left: -2%; }
+		100% { left: 0%; }
+	}
+
+	aside#slider_sponsors { overflow: hidden; }
+
+	aside#slider_sponsors figure
+	{ 
+		position: relative;
+		width: 200%; /* 100*nb_images/nb_images_par_slide% */
+		margin: 0;
+		animation: 15s slidy_sponsors infinite; 
+	}
+
+
+	/* ENF NATHAN
+	   START FestEsaip (Flor)*/
+	table 
+	{ 
+		margin: auto;
+	    border-collapse: collapse;
+		width: 100%
+	}
+	
+	th{
+		 border-top : 1px solid;	
+		 border-bottom :  1px solid;
+	}
+	
+	tr:hover{background-color:rgba(0, 0, 0, 0.5)}
+	
+	.anonce
+	{
+		text-align: center;
+		font-size :150%;
+		font-style: bold;
+		color : #009900;	
+
+	}
+
+	.espace{
+		font-size :130%;
+		margin: 1em 0;
+		list-style-position: inside;
+		text-align: center;
+	}
+
+	.FestEsaip
+	{
+		color:white;
+	}
+
+/*END FLOR*/
+
 }
 
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 1025px)
 {
+        body
+    {
+    	background-color: rgba(255, 255, 255, 0);
+        width: 100%;
+    }
 	nav
 	{
 		width: 130px;
@@ -234,6 +415,196 @@ a, a:active
 		display: flex;
 		flex-direction: row;
 		justify-content: left;
+		
+	}
+
+	#menu ol
+	{
+		width: 130px;
+		position: relative;
+		margin: 0% 0% 0% 0px;
+	    padding: 0% 0% 0% 0%;
+	}
+	
+		/* Nathan*/
+	section aside
+	{	
+		margin: 1.5% 3% 0% 3%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	section div
+	{	
+		margin: 1.5% 3% 0% 3%;
+		padding: 0.5% 0% 1.5% 0%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+	
+	section div p{
+		color: white;
+		font-size: 115%;
+		text-align:justify;
+		padding: 1.5% 5% 0% 5%;
+	}
+	
+	#body_flexbox{
+	
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: space-between;
+	}
+	
+	figure#artistes{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	
+	@keyframes slidy_artistes
+	{
+		0% { left: 0%; }
+		11% { left: 0%; }
+		16% { left: -33.3333%; }
+		27% { left: -33.3333%; }
+		32% { left: -66.6666%; }
+		43% { left: -66.6666%; }
+		48% { left: -100%; }
+		60% { left: -100%; }
+		65% { left: -133.3333%; }
+		79% { left: -133.3333%; }
+		85% { left: -166.6666%; }
+		95% { left: -166.6666%; }
+		100% { left: -200%;}	
+	}
+
+	aside#slider_artistes { overflow: hidden; }
+	
+	aside#slider_artistes figure p
+	{ 
+		width: 100%;
+		float: left;
+		font-size: 250%;
+	}
+
+	aside#slider_artistes figure { 
+	position: relative;
+	width: 300%; /* 100*nb_images/nb_images_par_slide% */
+	margin: 0;
+	text-align: center;
+	animation: 15s slidy_artistes infinite; 
+	}
+	
+	.small_image{
+		width: 100px;
+		height: 60px;		
+	}
+	figure#sponsors{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		align-items: center;
+		padding: 2% 0% 2% 0%;
+	}
+	
+	@keyframes slidy_sponsors
+	{
+		0% { left: 0%; } 1% { left: -2%; } 2% { left: -4%; } 3% { left: -6%; } 4% { left: -8%; }
+		5% { left: -10%; } 6% { left: -12%; } 7% { left: -14%; } 8% { left: -16%; } 9% { left: -18%; }
+		10% { left: -20%; } 11% { left: -22%; } 12% { left: -24%; } 13% { left: -26%; } 14% { left: -28%; }
+		15% { left: -30%; } 16% { left: -32%; } 17% { left: -34%; } 18% { left: -36%; } 19% { left: -38%; }
+		20% { left: -40%; } 21% { left: -42%; } 22% { left: -44%; } 23% { left: -46%; } 24% { left: -48%; }
+		25% { left: -50%; } 26% { left: -52%; } 27% { left: -54%; } 28% { left: -56%; } 29% { left: -58%; }
+		30% { left: -60%; } 31% { left: -62%; } 32% { left: -64%; } 33% { left: -66%; } 34% { left: -68%; }
+		35% { left: -70%; } 36% { left: -72%; } 37% { left: -74%; } 38% { left: -76%; } 39% { left: -78%; }
+		40% { left: -80%; } 41% { left: -82%; } 42% { left: -84%; } 43% { left: -86%; } 44% { left: -88%; }
+		45% { left: -90%; } 46% { left: -92%; } 47% { left: -94%; } 48% { left: -96%; } 49% { left: -98%; }
+		50% { left: -100%; } 51% { left: -98%; } 52% { left: -96%; } 53% { left: -94%; } 54% { left: -92%; }
+		55% { left: -90%; } 56% { left: -88%; } 57% { left: -86%; } 58% { left: -84%; } 59% { left: -82%; }
+		60% { left: -80%; } 61% { left: -78%; } 62% { left: -76%; } 63% { left: -74%; } 64% { left: -72%; }
+		65% { left: -70%; } 66% { left: -68%; } 67% { left: -66%; } 68% { left: -64%; } 69% { left: -62%; }
+		70% { left: -60%; } 71% { left: -58%; } 72% { left: -56%; } 73% { left: -54%; } 74% { left: -52%; }
+		75% { left: -50%; } 76% { left: -48%; } 77% { left: -46%; } 78% { left: -44%; } 79% { left: -42%; }
+		80% { left: -40%; } 81% { left: -38%; } 82% { left: -36%; } 83% { left: -34%; } 84% { left: -32%; }
+		85% { left: -30%; } 86% { left: -28%; } 87% { left: -26%; } 88% { left: -24%; } 89% { left: -22%; }
+		90% { left: -20%; } 91% { left: -18%; } 92% { left: -16%; } 93% { left: -14%; } 94% { left: -12%; }
+		95% { left: -10%; } 96% { left: -8%; } 97% { left: -6%; } 98% { left: -4%; } 99% { left: -2%; }
+		100% { left: 0%; }
+	}
+
+	aside#slider_sponsors { overflow: hidden; }
+
+	aside#slider_sponsors figure
+	{ 
+		position: relative;
+		width: 200%; /* 100*nb_images/nb_images_par_slide% */
+		margin: 0;
+		animation: 15s slidy_sponsors infinite; 
+	}
+	
+	section
+	{
+		width: calc(100% - 130px); /*Merci Antoine pour les pixels. Pensez au 'calc'!*/
 	}
 }
+
+/* START FOOTER PART */
+footer
+{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: grey;
+    display: block;
+    font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+    
+}
+
+li
+{
+    list-style-type:none;
+}
+
+.footer-content
+{
+    z-index: 1;
+    border: 1px solid white;
+}
+
+.footer-content-end
+{
+    border-top: 5px solid white;
+    margin-top: 0px;
+    padding-top: 15px;
+}
+
+.footer-spacer
+{
+    padding: 10px !important;
+    display: table-cell;
+    float: none !important;
+    border: 1px solid red;
+}
+
+.footer-title
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid green;
+}
+
+.footer-link
+{
+    padding: 20px 10px 35px 10px;
+    border: 1px solid blue;
+}
+
+/* END FOOTER PART */
+
 

@@ -43,8 +43,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li>Venir au Fest'Esaip</li>
         </div>
     </div>
+<<<<<<< HEAD
     <div class="footer-spacer">
         
+=======
+    <div class="footer-widget footer-widget-text">
+        Page rendered in <strong>{elapsed_time}</strong> seconds.</br>
+        <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?>
+>>>>>>> origin/development
     </div>
 </div>
 <div class="footer-content + footer-content-end">

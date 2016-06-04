@@ -3,7 +3,7 @@
  			<section>
 			<div class="FestEsaip">
                 <h3 id="historique" class="droit">Historique</h3>
-			<p class="anonce"> Retrouvez la liste de nos précédent événements et les artistes qui y étaient présent.</p>
+			<p class="anonce"> Retrouvez la liste de nos prÃ©cÃ©dent Ã©vÃ©nements et les artistes qui y Ã©taient prÃ©sent.</p>
                 <table>
 				<tr>
 					<th>

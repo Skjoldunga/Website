@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="<?php echo($url_base.'/assets/css/style_header.css')?>"/>
-		<title>Titre</title>
+		<title>Fest'Eaip</title>
 	</head>
 
 	<body>
@@ -23,8 +23,8 @@
 
 						<li>Fest'Esaip
 							<ul>
-								<li><a href="Historique/c1">Historique</a></li>
-								<li>Equipes / Contact</li>
+								<li><?php echo anchor($uri = $url_base."/Historique/c1#historique", $title = 'historique', $attributes = 'contact')?>
+								<li><?php echo anchor($uri = $url_base."/Historique/c1#contact", $title = 'Equipes / Contact', $attributes = 'contact')?></li>
 								<li>Sponsors</li>
 							</ul>
 						</li>
@@ -47,34 +47,31 @@
 
 						<li>S'inscrire / Tickets</li>
 
-						<li><?php echo $log_or_not ?>                                                            
-                                                    <ul>
-                                                        <form method="post" action="<?php echo($url_base.'accueil/login')?>">
-                                                            <!--légal de faire ça ? Mettre un lien dans une action ?-->
-                                                        <fieldset>
-                                                            <legend>Vos coords : </legend>
+						<li><?php echo $log_or_not ?>          
+                            <ol>
+                                <form method="post" action="<?php echo($url_base.'accueil/login')?>">
+                                    <!--légal de faire ça ? Mettre un lien dans une action ?-->
+                                    <fieldset>
+                                        <!--<legend></legend>-->
 
-                                                            <label for="login">login : </label>
-                                                            <input type="text" name="login" id="login" placeholder="Ex : a10a" size="12" maxlength="16" / required>
-                                                            <br />
-                                                            <label for="pass">mdp :</label>
-                                                            <input type="password" name="pass" id="pass"
-                                                                   size="12" maxlength="16" / required>
-                                                            <br />
+                                        <label for="login">login : </label>
+                                        <input type="text" name="login" id="login" placeholder="Ex : a10a" size="8" maxlength="25" / required>
+                                        <br />
+                                        <label for="pass">mdp :</label>
+                                        <input type="password" name="pass" id="pass"
+                                               size="8" maxlength="25" / required>
+                                        <br />
 
-                                                            <input type="submit" value="Login" />
-                                                        </fieldset>
-                                                        </form>
-                                                    </ul>                                                      
+                                        <input type="submit" value="Login" />
+                                    </fieldset>
+                                </form>
+                            </ul>                                                     
 						</li>
 					</ul>
 				</div>
 			</nav>
 
-			<aside>
-				PLOP
-			</aside>
-		</div>
+
 
 
 

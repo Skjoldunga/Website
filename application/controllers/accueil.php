@@ -35,8 +35,8 @@ class Accueil extends CI_Controller {
                         foreach($result as $row)
                         {
                             $sess_array = array(
-                            'id' => $row->id,
-                            'username' => $row->username
+                            'id' => $row->IDuser,
+                            'username' => $row->login
                         );
                             $this->session->set_userdata('logged_in', $sess_array);
                         }  

@@ -43,21 +43,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li>Venir au Fest'Esaip</li>
         </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div class="footer-spacer">
-        
-=======
     <div class="footer-widget footer-widget-text">
         Page rendered in <strong>{elapsed_time}</strong> seconds.</br>
         <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?>
->>>>>>> origin/development
-=======
-    <div class="footer-widget footer-widget-text">
-        <p>Page rendered in <strong>{elapsed_time}</strong> seconds.</p>
-        <p><?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
->>>>>>> parent of fce7f41... Footer
-    </div>
 </div>
 </footer>
 

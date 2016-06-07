@@ -556,12 +556,12 @@ a, a:active
 /* START FOOTER PART */
 footer
 {
-    width: auto;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(0, 0, 0, 0.7);
     color: grey;
-    display: block;
+    display: table;
     font-family: 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
     
 }
@@ -571,40 +571,35 @@ li
     list-style-type:none;
 }
 
-.footer-content
+.footer-row
 {
-    z-index: 1;
-    border: 1px solid white;
+    display: table-row;
 }
 
-.footer-content-end
+.footer-widget
 {
-    border-top: 5px solid white;
-    margin-top: 0px;
-    padding-top: 15px;
-}
-
-.footer-spacer
-{
-    padding: 10px !important;
+    padding: 0 !important;
     display: table-cell;
-    float: none !important;
-    border: 1px solid red;
+    max-width: 18% !important;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.footer-widget-text
+{
+    padding: 0 !important;
+    display: table-cell;
+    min-width: 50% !important;
 }
 
 .footer-title
 {
     text-transform: uppercase;
+    padding: 0 0 0 5px;
     font-weight: bold;
-    border: 1px solid green;
 }
 
-.footer-link
+.footer-body
 {
-    padding: 20px 10px 35px 10px;
-    border: 1px solid blue;
+    padding: 10px;
 }
-
 /* END FOOTER PART */
-
-

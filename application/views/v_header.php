@@ -65,17 +65,8 @@
                                         <input type="submit" value="Login" />
                                     </fieldset>
                                 </form>
-                            </ul>                                                     
+                            </ol>                                                     
 						</li>
 					</ul>
 				</div>
 			</nav>
-
-
-
-
-
-
-
-	</body>
-</html>

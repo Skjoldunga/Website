@@ -69,9 +69,3 @@
                 <p class="espace">Nous contacter : <a href="mailto:FestESAIP.contact@esaip.org">FestESAIP.contact@esaip.org</a> </p>
                 </div>
             </section>
-
-</div><!-- fin de la div container -->
-
-
-</body>
-</html>

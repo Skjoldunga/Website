@@ -13,13 +13,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <footer>
 <div class="footer-row">
-    <div class="footer-widget">
+    <div class="footer-widget" id="footer-widget-left">
         <div class="footer-title">Fest'Esaip</div>
         <div class="footer-body">
             <li>
-                <a href="Historique/c1" >Historique</a>
+                <a href="Historique/c1#historique" >Historique</a>
             </li>
-            <li>Equipes / Contact</li>
+            <li>
+                <a href="Historique/c1#contact" >Equipes / Contact</a>
+            </li>
             <li>Sponsors</li>
         </div>
     </div>

@@ -553,7 +553,11 @@ a, a:active
 	}
 }
 
-/* START FOOTER PART */
+/** START FOOTER PART 
+ * @author Adrien Pironneau
+ * @date 08/06/2016
+ * @version 0.2
+*/
 footer
 {
     width: 100%;
@@ -578,10 +582,15 @@ li
 
 .footer-widget
 {
-    padding: 0 !important;
+    padding: 0;
     display: table-cell;
     max-width: 18% !important;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+}
+
+#footer-widget-left
+{
+   padding-left: 1.5%;
 }
 
 .footer-widget-text
